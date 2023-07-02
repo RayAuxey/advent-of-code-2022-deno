@@ -1,0 +1,38 @@
+# Ignore the deno cache directory
+.deno/
+
+# Ignore the deno lock file
+deno.lock
+
+# Ignore the compiled TypeScript files
+*.js
+
+# Ignore the compiled TypeScript declaration files
+*.d.ts
+
+# Ignore the output directory (if applicable)
+dist/
+
+# Ignore the coverage directory (if applicable)
+coverage/
+
+# Ignore the log files
+*.log
+
+# Ignore any environment-specific configuration files
+.env
+.env.*
+
+# Ignore any generated documentation files
+doc/
+
+# Ignore any package manager files
+/deps.ts
+/deps.ts.map
+
+# Ignore any files related to test frameworks (e.g., Deno test runner)
+_test.ts
+_test.ts.map
+
+
+node_modules
