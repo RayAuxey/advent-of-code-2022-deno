@@ -10,7 +10,7 @@ const part = args[1];
 
 // deno-lint-ignore no-deprecated-deno-api
 const p = Deno.run({
-  cmd: ["deno", ...`run --allow-read ${day}/${part}.ts`.split(" ")],
+  cmd: ["deno", ...`run --allow-read src/${day}/${part}.ts`.split(" ")],
   stdout: "piped",
   stderr: "piped",
 });
