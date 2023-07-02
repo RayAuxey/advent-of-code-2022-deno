@@ -1,6 +1,6 @@
 # Advent of Code 2022
 
-Welcome to my repository for the Advent of Code 2022 solutions implemented using Deno.
+Welcome to my repository for the [Advent of Code 2022](https://adventofcode.com/2022) solutions implemented using Deno.
 
 ## Install Deno
 
