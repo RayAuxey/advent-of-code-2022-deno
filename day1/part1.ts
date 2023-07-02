@@ -12,4 +12,6 @@ for (const calories of lines) {
   currentCount += Number(calories);
 }
 
-console.log(maxCalories);
+export const answer = maxCalories;
+
+console.log(answer);
