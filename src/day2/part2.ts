@@ -15,3 +15,15 @@ export const shapeToChoose: shapeChoicesType = {
   "C Z": "X", // Scissors Win  -> Rock
 } as const;
 
+export function mapOutcomeToRoundScore(outcome: string) {
+  switch (outcome) {
+    case "X":
+      return roundScore.loss;
+    case "Y":
+      return roundScore.draw;
+    case "Z":
+      return roundScore.win;
+    default:
+      throw new Error(`Invalid outcome: ${outcome}`);
+  }
+}
