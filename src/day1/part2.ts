@@ -3,7 +3,7 @@ import { splitFileToLines } from "../utils.ts";
 let currentCount = 0;
 const maxCalories = [-Infinity, -Infinity, -Infinity];
 
-for (const calories of await splitFileToLines("src/day1/input.txt")) {
+for (const calories of await splitFileToLines("./src/day1/input.txt")) {
   if (calories === "") {
     updateMaxCalories(currentCount, maxCalories);
     currentCount = 0;
