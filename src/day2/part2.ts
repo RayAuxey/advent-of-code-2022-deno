@@ -1,3 +1,14 @@
+import { splitFileToLines } from "../utils.ts";
+import { roundScore } from "./shared.ts";
+import { shapeScore } from "./shared.ts";
+// import { outcomeScore } from "./shared.ts";
+
+const lines = await splitFileToLines("./src/day2/input.txt");
+
+type shapeChoicesType = {
+  [key: string]: "X" | "Y" | "Z";
+};
+
 export const shapeToChoose: shapeChoicesType = {
   // Opponent Selects Rock
   "A X": "Z", // Rock Loss  -> Scissors
