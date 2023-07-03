@@ -23,3 +23,23 @@ export const roundScore: roundScoreType = {
   win: 6,
 } as const;
 
+export type OutcomeScoreType = {
+  [key: string]: number;
+};
+
+export const outcomeScore: OutcomeScoreType = {
+  // Opponent Selects Rock
+  "A X": shapeScore.X + roundScore.draw, // Rock vs Rock
+  "A Y": shapeScore.Y + roundScore.win, // Rock vs Paper
+  "A Z": shapeScore.Z + roundScore.loss, // Rock vs Scissors
+
+  // Opponent Selects Paper
+  "B X": shapeScore.X + roundScore.loss, // Paper vs Rock
+  "B Y": shapeScore.Y + roundScore.draw, // Paper vs Paper
+  "B Z": shapeScore.Z + roundScore.win, // Paper vs Scissors
+
+  // Opponent Selects Scissors
+  "C X": shapeScore.X + roundScore.win, // Scissors vs Rock
+  "C Y": shapeScore.Y + roundScore.loss, // Scissors vs Paper
+  "C Z": shapeScore.Z + roundScore.draw, // Scissors vs Scissors
+};
