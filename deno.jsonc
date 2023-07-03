@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "run": "deno run --allow-run run.ts"
+  },
+  "test": {
+    "include": ["src/"],
+    "exclude": ["src/testdata/", "data/fixtures/**/*.ts", "run.ts"]
+  }
+}
