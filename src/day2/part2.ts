@@ -38,3 +38,24 @@ export function mapOutcomeToRoundScore(outcome: string) {
       throw new Error(`Invalid outcome: ${outcome}`);
   }
 }
+
+export function outcomeScore(opponentChoice: string, outcome: string) {
+  const shapeChoice = shapeToChoose[`${opponentChoice} ${outcome}`];
+  return shapeScore[shapeChoice] + mapOutcomeToRoundScore(outcome);
+}
+
+export const answer = calculateTotalScore(lines);
+
+console.log(answer);
+
+export function calculateTotalScore(lines: string[]) {
+  let totalScore = 0;
+
+  for (const line of lines) {
+    if (line === "") continue;
+    const [opponent, outcome] = line.split(" ");
+    totalScore += outcomeScore(opponent, outcome);
+  }
+
+  return totalScore;
+}
